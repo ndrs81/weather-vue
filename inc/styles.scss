@@ -1,0 +1,176 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  background: #fff;
+  padding: 20px;
+  font-family: 'Helvetica', sans-serif;
+  text-align: center;
+
+  p {
+    font-size: .5rem;
+    color: #0c2d58;
+    padding: 8px 0 0;
+  }
+
+  svg {
+    width: 100px;
+    .cls-1 {
+      isolation: isolate;
+    }
+    .cls-2 {
+      fill: #ff0;
+    }
+    .cls-3 {
+      fill: #ffd600;
+    }
+    .cls-4 {
+      opacity: 0.15;
+      mix-blend-mode: multiply;
+    }
+    .cls-5 {
+      fill: #eee;
+    }
+
+    &.sun {
+      position: absolute;
+      z-index: 0;
+      -webkit-animation: rotating 12s linear infinite;
+    }
+    &.cloud {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  @-webkit-keyframes rotating {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  #container {
+    width: 320px;
+    height: 580px;
+    margin: 0 auto;
+    background: linear-gradient(to bottom, #3773c1 0%, #7db9e8 100%);
+    border-radius: 8px;
+    box-shadow: 0 0 21px -4px #000;
+    transition: all 0.2s;
+
+    h3, h4 {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 2rem;
+      color: #fff;
+      padding: 20px 0 20px;
+      font-weight: 200;
+    }
+    h4 {
+      font-size: 1.2rem;
+    }
+
+    .weatherContainer {
+      h1 {
+        font-size: 5rem;
+        font-weight: 700;
+        color: #fff;
+        span {
+          font-size: 2rem;
+          vertical-align: top;
+        }
+      }
+      h4 {
+        padding: 0 0 14px;
+      }
+    }
+
+    .weatherDetails {
+      div {
+        display: inline-block;
+        height: 30px;
+        margin: 0 5%;
+
+        &.humidity, &.wind, &.uvindex {
+          h4 {
+            display: block;
+            vertical-align: middle;
+            padding: 0;
+          }
+          &.uvindex {
+            svg {
+              position: relative;
+              top: 3px;
+              .cls-1 {
+                stroke: #000;
+                stroke-miterlimit: 10;
+                stroke-width: 2px;
+              }
+            }
+          }
+          svg {
+            width: 32px;
+            display: inline-block;
+            padding: 4px;
+            opacity: 0.4;
+
+            .cls-3 {
+              fill: #fff;
+            }
+          }
+          .ic_humidity {
+            width: 24px;
+          }
+        }
+      }
+    }
+
+    .weatherForecast {
+      padding: 20px;
+      margin: 20px 0 0;
+      border-top: 1px solid rgba(0, 0, 0, 0);
+      background: #79B5E7;
+      transform: skew(180deg, -4deg);
+      .container {
+        transform: skew(180deg, 4deg);
+        div {
+          width: 30%;
+          margin: 0;
+          display: inline-block;
+          p {
+            padding: 0;
+            font-size: .75rem;
+            color: rgba(0, 0, 0, 0.6);
+          }
+          h3 {
+            padding: 0;
+            span {
+              font-size: 1rem;
+              vertical-align: super;
+            }
+          }
+          .flex {
+            display: flex;
+            width: 100%;
+            margin: 0;
+            h4 {
+              padding: 0;
+              font-size: .75em;
+              line-height: 1.125;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
